@@ -1,31 +1,36 @@
 <div class="container">
-    <div class="row">
-        <div class="col s12 m4 l3 col-pad-top">
+    <div class="row wrapper">
+        <div class="col s12 m4 l3 col-pad-top left">
 
-            {{!-- <ul class="collection"> --}}
-            <ul class="collection with-header">
+            <ul class="collection with-header center-align">
                 <li class="collection-header center-align"><h6>Burgers to eat!</h6></li>
                 {{#each burgers}} 
                     {{#unless devoured}} 
-                        {{> burgers/burger-buttons devoured=false}} 
+                        <li class="collection-item">
+                            {{burger_name}}
+                            <button class="btn waves-effect waves-light switch-devour" type="submit" name="action" data-id="{{id}}" data-eaten="{{devoured}}">
+		                    Eat it!
+	                        </button>
+                        </li>
                     {{/unless}} 
                 {{/each}}
             </ul>
         </div>
 
-        <div class="col s12 m4 l6 img-pad-top">
+        <div class="col s12 m4 l6 img-pad-top center">
             <img src="/assets/img/smaller-burger.svg">
             <h3 class="center-align">Eat-Dat-Burger</h3>
         </div>
 
-        <div class="col s12 m4 l3 col-pad-top">
+        <div class="col s12 m4 l3 col-pad-top right center-align">
 
-            {{!-- <ul class="collection"> --}}
             <ul class="collection with-header">
                 <li class="collection-header center-align"><h6>Burgers you've eaten!</h6></li>
                 {{#each burgers}} 
                     {{#if devoured}} 
-                        {{> burgers/burger-buttons devoured=true}} 
+                        <li class="collection-item">
+                        {{burger_name}}
+                        </li>
                     {{/if}} 
                 {{/each}}
             </ul>

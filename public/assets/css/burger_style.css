@@ -13,3 +13,30 @@
 .img-pad-top {
     padding-top: 30px !important;
 }
+
+@media screen and (max-width: 760px) {  
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .center {
+    width: 75%;
+    position: relative;
+    order: 1;
+    }
+
+    .left {
+        width: 75%;
+        position: relative;
+        order: 2;
+    }
+
+    .right {
+        width: 75%;
+        position: relative;
+        order: 3;  
+    }
+
+}
