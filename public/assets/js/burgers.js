@@ -51,24 +51,29 @@ $(function () {
             }
 
         );
-        
+
+    });
+
+    $(".delete-burger").on("click", function (event) {
+
+        let id = $(this).data("id");
+
+        // Using delete to remove a burger from the database
+        $.ajax("/api/burgers/" + id, {
+
+            type: "DELETE"
+
+        }).then(
+            
+            function () {
+
+                // want to fix this
+                location.reload();
+
+            }
+
+        );
+
     });
 
 });
-
-
-// holding for if add in delete functionality
-//   $(".delete-burger").on("click", function(event) {
-//     var id = $(this).data("id");
-
-//     // Send the DELETE request.
-//     $.ajax("/api/burgers/" + id, {
-//       type: "DELETE"
-//     }).then(
-//       function() {
-//         console.log("deleted burger", id);
-//         // Reload the page to get the updated list
-//         location.reload();
-//       }
-//     );
-//   });

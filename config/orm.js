@@ -112,27 +112,29 @@ let orm = {
 
         });
 
+    },
+    delete: function (table, condition, cb) {
+
+        let queryString = "DELETE FROM " + table;
+
+        queryString += " WHERE ";
+        queryString += condition;
+
+        connection.query(queryString, function (err, result) {
+
+            if (err) {
+
+                throw err;
+
+            }
+
+            cb(result);
+
+        });
+
     }
 
 };
 
 // Exporting orm to be used in the burger model
 module.exports = orm;
-
-
-// add later for more functionality?
-// this could be a button that resets both lists or maybe just one?
-// ,
-//   delete: function(table, condition, cb) {
-//     let queryString = "DELETE FROM " + table;
-//     queryString += " WHERE ";
-//     queryString += condition;
-
-//     connection.query(queryString, function(err, result) {
-//       if (err) {
-//         throw err;
-//       }
-
-//       cb(result);
-//     });
-//   }

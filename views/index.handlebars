@@ -3,7 +3,9 @@
         <div class="col s12 m4 l3 col-pad-top left">
 
             <ul class="collection with-header center-align">
-                <li class="collection-header center-align"><h6>Burgers to eat!</h6></li>
+                <li class="collection-header center-align">
+                    <h6 class="bold">Burgers to eat!</h6>
+                </li>
                 {{#each burgers}} 
                     {{#unless devoured}} 
                         <li class="collection-item">
@@ -25,11 +27,16 @@
         <div class="col s12 m4 l3 col-pad-top right center-align">
 
             <ul class="collection with-header">
-                <li class="collection-header center-align"><h6>Burgers you've eaten!</h6></li>
+                <li class="collection-header center-align">
+                    <h6 class="bold">Burgers you've eaten!</h6>
+                </li>
                 {{#each burgers}} 
                     {{#if devoured}} 
                         <li class="collection-item">
                         {{burger_name}}
+                        <button class="btn waves-effect waves-light delete-burger" data-id="{{id}}">
+		                    Hated It!
+	                        </button>
                         </li>
                     {{/if}} 
                 {{/each}}
