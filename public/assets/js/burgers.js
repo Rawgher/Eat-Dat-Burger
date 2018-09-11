@@ -46,8 +46,8 @@ $(function () {
 
             function () {
 
-                // want to fix this
-                location.reload();
+                $("#new-burgers").append("<li class='collection-item'>" + newBurger.burger_name + ' <button class="btn waves-effect waves-light switch-devour" type="submit" name="action" data-id="' + newBurger.id + '" data-eaten="' + newBurger.devoured + '">Eat it!</button></li>');
+
             }
 
         );
@@ -64,7 +64,7 @@ $(function () {
             type: "DELETE"
 
         }).then(
-            
+
             function () {
 
                 // want to fix this
