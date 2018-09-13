@@ -45,8 +45,8 @@ $(function () {
         }).then(
 
             function () {
-
-                $("#new-burgers").append("<li class='collection-item'>" + newBurger.burger_name + ' <button class="btn waves-effect waves-light switch-devour" type="submit" name="action" data-id="' + newBurger.id + '" data-eaten="' + newBurger.devoured + '">Eat it!</button></li>');
+                location.reload();
+                // $("#new-burgers").append("<li class='collection-item'>" + newBurger.burger_name + ' <button class="btn waves-effect waves-light switch-devour" type="submit" name="action" data-id="' + newBurger.id + '" data-eaten="' + newBurger.devoured + '">Eat it!</button></li>');
 
             }
 
