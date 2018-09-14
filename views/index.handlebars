@@ -4,15 +4,19 @@
 
             <ul class="collection with-header center-align" id="new-burgers">
                 <li class="collection-header center-align">
-                    <h6 class="bold">Burgers to eat!</h6>
+                    <h6 class="bold">Burgers to Eat!</h6>
                 </li>
                 {{#each burgers}} 
                     {{#unless devoured}} 
                         <li class="collection-item">
                             {{burger_name}}
+                            {{!-- make a div to hold the two buttons and use grids to center them below the burger name --}}
+                            {{!-- css to add a fill on hover --}}
+                            {{!-- add in two new buttons here. change first button to have same devour class, data id and data devour --}}
                             <button class="btn waves-effect waves-light switch-devour" type="submit" name="action" data-id="{{id}}" data-eaten="{{devoured}}">
 		                    Eat it!
 	                        </button>
+                            {{!-- add second button for thumbs down. use the data from below and the delete-burger class --}}
                         </li>
                     {{/unless}} 
                 {{/each}}
@@ -28,12 +32,13 @@
 
             <ul class="collection with-header" id="eaten-burgers">
                 <li class="collection-header center-align">
-                    <h6 class="bold">Burgers you've eaten!</h6>
+                    <h6 class="bold">Burger Hall of Fame!</h6>
                 </li>
                 {{#each burgers}} 
                     {{#if devoured}} 
                         <li class="collection-item">
                         {{burger_name}}
+                        {{!-- get rid of this button after adding the thumbs down above --}}
                         <button class="btn waves-effect waves-light delete-burger" data-id="{{id}}">
 		                    Hated It!
 	                        </button>
@@ -48,9 +53,12 @@
 <div class="row">
         <form class="col s12 center-align" id="burgerForm">
             <div class="row">
-                <div class="input-field col s12" id="burger-input">
+                <div class="col s12 m2 l2"></div>
+                <div class="input-field col s12 m8 l8" id="burger-input">
                     <input placeholder="Add A Burger!" id="newBurgerName" type="text" class="black-text">
                 </div>
+            </div>
+            <div class="row">
                 <button class="btn waves-effect waves-light" type="submit" name="action">Submit your Burger <img src="/assets/img/fastfood-white.svg" id="white-color"></button>
             </div>
         </form>
