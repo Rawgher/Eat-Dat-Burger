@@ -22,6 +22,28 @@
     top: 5px;
 }
 
+.btn {
+    background-color: #000;
+}
+
+.btn:hover {
+    background-color: #000;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #000 !important;
+    box-shadow: 0 1px 0 0 #000 !important;
+  }
+
+  .input-field input[type=text]::placeholder {
+    color: #000 !important;
+    opacity: 0.3 !important;
+  }
+
+  #white-color {
+      filter: invert(1);
+  }
+
 @media screen and (max-width: 768px) {  
 
     .img-pad-top {
