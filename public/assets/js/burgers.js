@@ -1,7 +1,7 @@
 // Making sure functions do not run until the DOM is loaded
 $(function () {
 
-    $(".switch-devour").on("click", function (event) {
+    $("#new-burgers").on("click", ".switch-devour", function (event) {
 
         let id = $(this).data("id");
         let eaten = $(this).data("eaten");
@@ -20,8 +20,9 @@ $(function () {
 
             function () {
 
-                // want to fix this so page doesnt reload
-                location.reload();
+                // Calls to make the sections of the page reload rather than a full refresh
+                $("#new-burgers").load(location.href + " #new-burgers>*", "");
+                $("#eaten-burgers").load(location.href + " #eaten-burgers>*", "");
             }
 
         );
@@ -45,8 +46,10 @@ $(function () {
         }).then(
 
             function () {
-                location.reload();
-                // $("#new-burgers").append("<li class='collection-item'>" + newBurger.burger_name + ' <button class="btn waves-effect waves-light switch-devour" type="submit" name="action" data-id="' + newBurger.id + '" data-eaten="' + newBurger.devoured + '">Eat it!</button></li>');
+
+                // Refreshes new burger div
+                $("#new-burgers").load(location.href + " #new-burgers>*", "");
+                $("#burger-input").load(location.href + " #burger-input>*", "" );
 
             }
 
@@ -54,7 +57,7 @@ $(function () {
 
     });
 
-    $(".delete-burger").on("click", function (event) {
+    $("#eaten-burgers").on("click", ".delete-burger", function (event) {
 
         let id = $(this).data("id");
 
@@ -67,8 +70,8 @@ $(function () {
 
             function () {
 
-                // want to fix this
-                location.reload();
+                // Refreshes eaten burger div
+                $("#eaten-burgers").load(location.href + " #eaten-burgers>*", "");
 
             }
 
