@@ -5,7 +5,7 @@ Welcome to Eat-Dat-Burger! This application will allow you to store burgers you 
 
 ***
 
-## Installation (For Local Installation)
+## Local Installation
 First, clone the respository locally. You will then need to run an ```npm install``` on your command line.
 
 After the dependencies have been installed, you can start the application using ```node server.js```. This application runs on ```Port 8080```, so please have this port open.
