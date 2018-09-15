@@ -2,6 +2,10 @@
     background-color: #FBD16E;
 }
 
+.wrapper {
+    margin-bottom: 0px;
+}
+
 .black-text {
     color: #000;
 }
@@ -22,14 +26,6 @@
     top: 5px;
 }
 
-.btn {
-    background-color: #000;
-}
-
-.btn:hover {
-    background-color: #000;
-}
-
 .input-field input[type=text]:focus {
     border-bottom: 1px solid #000 !important;
     box-shadow: 0 1px 0 0 #000 !important;
@@ -44,11 +40,52 @@
       filter: invert(1);
   }
 
+  .collection.with-header .collection-item {
+    padding-left: 15px;
+}
+
+.reset-margins {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.mar-bot {
+    margin-bottom: 2px;
+}
+
+@media screen and (max-width: 1024px) {
+    .remove {
+        width: 0% !important;
+        padding: 0px !important;
+    }
+    
+    .new-spot {
+        padding-right: 56px !important;
+        padding-left: 14px !important;
+    }
+}
+
 @media screen and (max-width: 768px) {  
 
     .img-pad-top {
         padding-top: 65px !important;
     }
+
+    .remove {
+        width: 16.6666666667% !important;
+        margin-left: auto !important;
+        left: auto !important;
+        right: auto !important;
+    }
+    
+    .new-spot {
+        width: 33.3333333333% !important;
+        margin-left: auto !important;
+        left: auto !important;
+        right: auto !important;
+        padding: 0 .75rem !important;
+    }
+
 }
 
 
@@ -81,4 +118,11 @@
         padding-top: 10px !important;
     }
 
+}
+
+@media screen and (max-width: 425px) {
+    .reset-margins {
+        margin-top: 10px;
+        margin-bottom: 7px;
+    }
 }

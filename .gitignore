@@ -2,3 +2,4 @@
 .env
 .thumbdb
 .vs
+node_modules

@@ -57,7 +57,7 @@ $(function () {
 
     });
 
-    $("#eaten-burgers").on("click", ".delete-burger", function (event) {
+    $("#new-burgers").on("click", ".delete-burger", function (event) {
 
         let id = $(this).data("id");
 
@@ -71,6 +71,7 @@ $(function () {
             function () {
 
                 // Refreshes eaten burger div
+                $("#new-burgers").load(location.href + " #new-burgers>*", "");
                 $("#eaten-burgers").load(location.href + " #eaten-burgers>*", "");
 
             }

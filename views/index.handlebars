@@ -12,11 +12,20 @@
                             {{burger_name}}
                             {{!-- make a div to hold the two buttons and use grids to center them below the burger name --}}
                             {{!-- css to add a fill on hover --}}
+                            <div class="row reset-margins">
+                            <div class="col s2 remove"></div>
+                            <div class="col s4 new-spot">
+                            <button class="btn btn-small waves-effect waves-light red switch-devour" type="submit" name="action" data-id="{{id}}" data-eaten="{{devoured}}"><i class="material-icons">thumb_up</i></button>
+                            </div>
+                            <div class="col s4 new-spot">
+                            <button class="btn btn-small waves-effect waves-light red delete-burger" data-id="{{id}}"><i class="material-icons">thumb_down</i></button>
+                            </div>
                             {{!-- add in two new buttons here. change first button to have same devour class, data id and data devour --}}
-                            <button class="btn waves-effect waves-light switch-devour" type="submit" name="action" data-id="{{id}}" data-eaten="{{devoured}}">
+                            {{!-- <button class="btn waves-effect waves-light switch-devour" type="submit" name="action" data-id="{{id}}" data-eaten="{{devoured}}">
 		                    Eat it!
-	                        </button>
+	                        </button> --}}
                             {{!-- add second button for thumbs down. use the data from below and the delete-burger class --}}
+                            </div>
                         </li>
                     {{/unless}} 
                 {{/each}}
@@ -38,10 +47,6 @@
                     {{#if devoured}} 
                         <li class="collection-item">
                         {{burger_name}}
-                        {{!-- get rid of this button after adding the thumbs down above --}}
-                        <button class="btn waves-effect waves-light delete-burger" data-id="{{id}}">
-		                    Hated It!
-	                        </button>
                         </li>
                     {{/if}} 
                 {{/each}}
@@ -52,14 +57,14 @@
 
 <div class="row">
         <form class="col s12 center-align" id="burgerForm">
-            <div class="row">
+            <div class="row mar-bot">
                 <div class="col s12 m2 l2"></div>
                 <div class="input-field col s12 m8 l8" id="burger-input">
                     <input placeholder="Add A Burger!" id="newBurgerName" type="text" class="black-text">
                 </div>
             </div>
             <div class="row">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit your Burger <img src="/assets/img/fastfood-white.svg" id="white-color"></button>
+                <button class="btn waves-effect waves-light red" type="submit" name="action">Submit your Burger <img src="/assets/img/fastfood-white.svg" id="white-color"></button>
             </div>
         </form>
         <p class="center-align">Enter the name of a burger you'd like to eat above. Then hit submit!</p>
