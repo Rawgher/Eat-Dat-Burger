@@ -139,9 +139,21 @@
     }
 }
 
+@media screen and (max-width: 414px) {
+    .rethink {
+        margin-left: 132px;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .rethink {
         margin-left: 116px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .rethink {
+        margin-left: 108px;
     }
 }
 
