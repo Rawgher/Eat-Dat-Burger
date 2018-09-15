@@ -1,7 +1,7 @@
 # Eat-Dat-Burger
 
 ## Application Description
-Welcome to Eat-Dat-Burger! This application will allow you to store burgers you would like to eat in an unordered list. You can either use the thumbs up button to add it to your "burger hall of fame" or use the thumbs down button to forget you ever ate it.
+Welcome to Eat-Dat-Burger! This application will allow you to store burgers you would like to eat in an unordered list. You can either use the thumbs up button to add it to your "burger hall of fame" or use the thumbs down button to forget you ever ate it. If you change your mind about a burger, there is a button to move the burger back to the unordered list on the left and delete it.
 
 ***
 
