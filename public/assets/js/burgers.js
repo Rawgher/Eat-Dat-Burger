@@ -29,6 +29,34 @@ $(function () {
 
     });
 
+    $("#eaten-burgers").on("click", ".rethink", function (event) {
+
+        let id = $(this).data("id");
+        let eaten = $(this).data("eaten");
+
+        let eatenState = {
+            devoured: eaten
+        };
+
+        // Using a put request to update the devoured state
+        $.ajax("/api/burgers/rethink/" + id, {
+
+            type: "PUT",
+            data: eatenState
+
+        }).then(
+
+            function () {
+
+                // Calls to make the sections of the page reload rather than a full refresh
+                $("#new-burgers").load(location.href + " #new-burgers>*", "");
+                $("#eaten-burgers").load(location.href + " #eaten-burgers>*", "");
+            }
+
+        );
+
+    });
+
     $("#burgerForm").on("submit", function (event) {
 
         event.preventDefault();

@@ -63,6 +63,10 @@
         padding-right: 56px !important;
         padding-left: 14px !important;
     }
+
+    .rethink {
+        margin-left: 34px;
+    }
 }
 
 @media screen and (max-width: 768px) {  
@@ -84,6 +88,10 @@
         left: auto !important;
         right: auto !important;
         padding: 0 .75rem !important;
+    }
+
+    .rethink {
+        margin-left: 56px;
     }
 
 }
@@ -124,5 +132,21 @@
     .reset-margins {
         margin-top: 10px;
         margin-bottom: 7px;
+    }
+
+    .rethink {
+        margin-left: 140px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .rethink {
+        margin-left: 116px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .rethink {
+        margin-left: 90px;
     }
 }
